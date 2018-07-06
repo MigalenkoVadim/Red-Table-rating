@@ -26,8 +26,8 @@ export function gameBase() {
                 </table>
             </div>
         `)
-        for (let j = 1; j < 16; j++) {
-            if (j < 11) {
+        for (let j = 1; j <= 15; j++) {
+            if (j <= 10) {
                 if (obj[i]["дон"] == j) {
                     $(`.game.${i} tr:nth-child(${j}) td`).addClass('don');
                 } else if (obj[i]["маф1"] == j || obj[i]["маф2"] == j) {
