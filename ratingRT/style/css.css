@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    background-image: url(./img/logoRT.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: auto 97%;
+    height: 100vh;
+    min-width: 720px;
+}
+
+
+table {
+    border: 1px solid black;
+    font-size: 20px;
+    margin: 10px;
+    border-collapse: collapse;
+    text-align: center;
+    clear: both;
+    width: 98%;
+    max-width: 2000px;
+}
+
+table td {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+table tr {
+    border: 1px solid black;
+    height: 32px;
+}
+
+.mir, .mir-wins, .maf, .maf-wins, .don, .don-wins, .sher, .sher-wins, .wins, .games, .result, .points, .py, .lx {
+    width: 80px;
+}
+
+.nick {
+    min-width: 200px;
+    max-width: 230px;
+    width: 200px;
+    text-align: left;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+.head .sher, .head .sher-wins {
+    background: red;
+}
+
+.head .don, .head .don-wins {
+    background: rgb(32, 31, 31);
+    color: white;
+}
+
+.head .maf, .head .maf-wins {
+    background: rgb(65, 60, 60);
+    color: white;
+}
+
+.head .mir, .head .mir-wins {
+    background: lightcoral;
+}
+
+.head .result, .head .points, .head .nick, .head .games, .head .wins {
+    background: yellow;
+}
+
+.head .py, .head .lx {
+    background: lightgray;
+}
+
+.num {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-image: url(./img/logoRT3.png);
+    background-size: 30px;
+    color: red;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    margin: 0;
+    float: right;
+}
+
+.nick p {
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+
+.gray {
+    background-color: lightgray;
+}
+
+.open-new-stat {
+    margin: 0px -20px 0px 40px;
+    width: 150px;
+    height: 37px;
+    cursor: pointer;
+    font-weight: 600;
+    background: lightgray;
+    padding: 5px;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.open-new-stat:after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    border: 47px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 30px solid lightgray;
+}
+
+.open-new-stat:before {
+    content: '';
+    position: absolute;
+    right: 160px;
+    top: 0px;
+    border: 47px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 30px solid lightgray;
+    border-left: 0px solid transparent;
+}
+
+.active {
+    z-index: 1;
+    background: rgb(144, 181, 206);
+}
+
+.active:after {
+    border-left: 30px solid rgb(144, 181, 206);
+}
+
+.active:before {
+    border-right: 30px solid rgb(144, 181, 206);
+}
+
+
+.roles-table td {
+    height: 25px;
+    padding: 0px 0px 0px 5px;
+}
+
+.roles-table .head td {
+    width: 16%;
+    height: 46px;
+}
+
+.percent {
+    float: right;
+    width: 60px;
+    margin: 0px 15px 0px 0px;
+    padding-right: 5px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.parity {
+    float: left;
+    padding-left: 10px;
+    margin: 0px;
+    line-height: 35px;
+    min-width: 55px;
+}
+
+.top {
+    background: rgb(63, 212, 76);
+}
+
+.lox {
+    background: rgb(212, 44, 44);
+}
+
+.arrow {
+    float: right;
+    padding: 0px 3px 0px 0px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.roles-table .head p {
+    margin: 0px 0px 0px 2px;
+    float: left;
+    width: 100px;
+}
+
+.go-play {
+    position: relative;
+}
+
+.go-play-popup {
+    position: absolute;
+    width: 220px;
+    font-size: 20px;
+    line-height: 20px;
+    top: 47px;
+    left: 370px;
+    background: lightgrey;
+    z-index: 1;
+}
+
+.popup-table {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.popup-table td:hover {
+    cursor: pointer;
+    background: lightslategray;
+}
+
+.shadow {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0, 0.7);;
+    visibility: hidden;
+    position: fixed;
+}
+
+.players-table td {
+    width: 200px;
+}
+
+.games-wrapper {
+    border-top: 1px solid black;
+    position: relative;
+    min-width: 750px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.game {
+    width: 150px;
+    line-height: 15px;
+    font-size: 17px;
+}
+
+.game tr {
+    height: 20px;
+}
+
+.game-wrapper {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+}
