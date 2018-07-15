@@ -5,6 +5,7 @@ import {playersStat} from './playersStat.js';
 import {gameBase} from './gameBase.js';
 startingTable();
 
+
 $(`.open-new-stat:nth-child(1)`).click(function(){
     $(`.open-new-stat:nth-child(1)`).addClass('active');
     $(`.open-new-stat:nth-child(2)`).removeClass('active');
