@@ -89,7 +89,7 @@ function startingTable() {
  
         for (let j = 1; j < nonRatingPlayers.length; j++) {
      
-            if( nonRatingPlayers[j].value > nonRatingPlayers[j-1].value ){
+            if( nonRatingPlayers[j].games > nonRatingPlayers[j-1].games ){
                 var temp = nonRatingPlayers[j];
                 nonRatingPlayers[j] = nonRatingPlayers[j-1];
                 nonRatingPlayers[j-1] = temp;
