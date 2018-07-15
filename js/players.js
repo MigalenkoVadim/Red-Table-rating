@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 79;
+let allGames = 85;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -30,6 +30,7 @@ playerRow("Тихий", 96);
 playerRow("Жнец");
 playerRow("Маг");
 playerRow("Физик");
+playerRow("Зодиак");
 
 export function playerRow(nick, num) {
     let player = {};
@@ -178,7 +179,7 @@ export function playerRow(nick, num) {
  
         for (let j = 1; j < nonRatingPlayers.length; j++) {
      
-            if( nonRatingPlayers[j].value > nonRatingPlayers[j-1].value ){
+            if( nonRatingPlayers[j].games > nonRatingPlayers[j-1].games ){
                 var temp = nonRatingPlayers[j];
                 nonRatingPlayers[j] = nonRatingPlayers[j-1];
                 nonRatingPlayers[j-1] = temp;
