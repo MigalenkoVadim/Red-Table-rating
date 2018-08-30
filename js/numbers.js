@@ -64,7 +64,6 @@ export function numberStat() {
                 <td>${winsArr[9]}/${gamesArr[9]}</td>
             </tr>
         `)
-        console.log(gamesArr);
         for (let i = 0; i < 10; i++) {
             let box = i+2
             if (gamesArr[i] == 0) {
