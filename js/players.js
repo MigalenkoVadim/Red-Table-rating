@@ -70,7 +70,6 @@ export function playerRow(nick, num) {
         points = wins + +(lx);
         result = Math.round(points/games * 10000)/100;
     }
-    console.log(games);
     if (num && allGames/4 > games) {
         player.code = `<tr class='gray'>
             <td class='nick'><p>${nick}</p><p class='num gray'>${num}</p></td>
