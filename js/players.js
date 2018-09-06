@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 90;
+let allGames = 95;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -65,12 +65,12 @@ export function playerRow(nick, num) {
             if (obj[i]["пу"] == number) {
                 py++;
                 lx += +(obj[i]["лх"]);
-            } 
+            }
         }
         points = wins + +(lx);
         result = Math.round(points/games * 10000)/100;
     }
-    if (num && allGames/4 > games) {
+    if (num && allGames/5 > games) {
         player.code = `<tr class='gray'>
             <td class='nick'><p>${nick}</p><p class='num gray'>${num}</p></td>
             <td class='games'>${games}</td>
@@ -106,7 +106,7 @@ export function playerRow(nick, num) {
             <td class='points'>${points}</td>
             <td class='result'>${result}</td>
         </tr>`;
-    } else if (allGames/4 > games){
+    } else if (allGames/5 > games){
         player.code = `<tr class='gray'>
             <td class='nick'>${nick}</td>
             <td class='games'>${games}</td>
@@ -160,16 +160,16 @@ export function playerRow(nick, num) {
     player.points = points;
     player.result = result;
     player.num = num;
-    if (allGames/4 <= games) {
+    if (allGames/5 <= games) {
         ratingPlayers.push(player);
     } else {
         nonRatingPlayers.push(player);
     }
 
     for (let i = 1; i < ratingPlayers.length; i++) {
- 
+
         for (let j = 1; j < ratingPlayers.length; j++) {
-     
+
             if( ratingPlayers[j].value > ratingPlayers[j-1].value ){
                 var temp = ratingPlayers[j];
                 ratingPlayers[j] = ratingPlayers[j-1];
@@ -178,9 +178,9 @@ export function playerRow(nick, num) {
         }
     }
     for (let i = 1; i < nonRatingPlayers.length; i++) {
- 
+
         for (let j = 1; j < nonRatingPlayers.length; j++) {
-     
+
             if( nonRatingPlayers[j].games > nonRatingPlayers[j-1].games ){
                 var temp = nonRatingPlayers[j];
                 nonRatingPlayers[j] = nonRatingPlayers[j-1];
@@ -191,5 +191,3 @@ export function playerRow(nick, num) {
 }
 
 export {ratingPlayers, nonRatingPlayers, allGames, redWins, blackWins};
-
-

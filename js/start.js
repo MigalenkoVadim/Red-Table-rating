@@ -75,9 +75,9 @@ function startingTable() {
     `)
 
     for (let i = 1; i < ratingPlayers.length; i++) {
- 
+
         for (let j = 1; j < ratingPlayers.length; j++) {
-     
+
             if( ratingPlayers[j].value > ratingPlayers[j-1].value ){
                 var temp = ratingPlayers[j];
                 ratingPlayers[j] = ratingPlayers[j-1];
@@ -86,9 +86,9 @@ function startingTable() {
         }
     }
     for (let i = 1; i < nonRatingPlayers.length; i++) {
- 
+
         for (let j = 1; j < nonRatingPlayers.length; j++) {
-     
+
             if( nonRatingPlayers[j].games > nonRatingPlayers[j-1].games ){
                 var temp = nonRatingPlayers[j];
                 nonRatingPlayers[j] = nonRatingPlayers[j-1];
@@ -116,11 +116,8 @@ function startingTable() {
                 <td  style='background: rgb(32, 31, 31); color: white;'>Побед мафии:${blackWins}</td>
             </tr>
             <tr>
-                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.floor(allGames/4)}</td>
+                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.floor(allGames/5)}</td>
             </tr>
         </table>
     `);
 }
-
-
-
