@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 128;
+let allGames = 160;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -9,7 +9,7 @@ playerRow("Аврора", 4);
 playerRow("Янг", 43);
 playerRow("Ворон", 7);
 playerRow("Лион", 75);
-playerRow("Флеш", 95);
+playerRow("Флэш", 95);
 playerRow("Валерун-Балерун", 69);
 playerRow("awd2", 2);
 playerRow("Хулиган", 11);
@@ -36,6 +36,12 @@ playerRow("Алекс");
 playerRow("Арбузик");
 playerRow("Хорист");
 playerRow("Classika");
+playerRow("Шарлотта");
+playerRow("Плесень");
+playerRow("Маузер");
+playerRow("Шико");
+playerRow("Пиковый валет");
+playerRow("Блэйн");
 
 export function playerRow(nick, num) {
     let player = {};
@@ -165,7 +171,7 @@ export function playerRow(nick, num) {
     player.num = num;
     if (allGames/5 <= games) {
         ratingPlayers.push(player);
-    } else {
+    } else if (allGames/20 <= games){
         nonRatingPlayers.push(player);
     }
 
