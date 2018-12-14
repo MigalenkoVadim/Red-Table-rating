@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 170;
+let allGames = 175;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
