@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 196;
+let allGames = 201;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -81,7 +81,7 @@ export function playerRow(nick, num) {
         points = wins + +(lx);
         result = Math.round(points/games * 10000)/100;
     }
-    if (num && allGames/5 > games) {
+    if (num && Math.floor(allGames/5) > games) {
         player.code = `<tr class='gray'>
             <td class='nick'><p>${nick}</p><p class='num gray'>${num}</p></td>
             <td class='games'>${games}</td>
@@ -117,7 +117,7 @@ export function playerRow(nick, num) {
             <td class='points'>${points}</td>
             <td class='result'>${result}</td>
         </tr>`;
-    } else if (allGames/5 > games){
+    } else if (Math.floor(allGames/5) > games){
         player.code = `<tr class='gray'>
             <td class='nick'>${nick}</td>
             <td class='games'>${games}</td>
@@ -171,7 +171,7 @@ export function playerRow(nick, num) {
     player.points = points;
     player.result = result;
     player.num = num;
-    if (allGames/5 <= games) {
+    if (Math.floor(allGames/5) <= games) {
         ratingPlayers.push(player);
     } else if (allGames/20 <= games){
         nonRatingPlayers.push(player);
