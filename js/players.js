@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 201;
+let allGames = 206;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -29,7 +29,7 @@ playerRow("Сова");
 playerRow("ВМТ");
 playerRow("Тихий", 96);
 playerRow("Жнец");
-playerRow("Маг");
+playerRow("Маг", 99);
 playerRow("Физик");
 playerRow("Зодиак");
 playerRow("Алекс");
@@ -117,7 +117,7 @@ export function playerRow(nick, num) {
             <td class='points'>${points}</td>
             <td class='result'>${result}</td>
         </tr>`;
-    } else if (Math.floor(allGames/5) > games){
+    } else if (allGames/5 > games){
         player.code = `<tr class='gray'>
             <td class='nick'>${nick}</td>
             <td class='games'>${games}</td>
