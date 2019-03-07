@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 216;
+let allGames = 221;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -15,7 +15,7 @@ playerRow("awd2", 2);
 playerRow("Хулиган", 11);
 playerRow("Герда");
 playerRow("Шут", 10);
-playerRow("Бильбо");
+playerRow("Бильбо", 21);
 playerRow("Крис", 18);
 playerRow("Зверь", 13);
 playerRow("Крузенштерн");
