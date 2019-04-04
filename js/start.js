@@ -116,7 +116,7 @@ function startingTable() {
                 <td  style='background: rgb(32, 31, 31); color: white;'>Побед мафии:${blackWins}</td>
             </tr>
             <tr>
-                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.floor(allGames/5)}</td>
+                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.ceil(allGames*0.15)}</td>
             </tr>
         </table>
     `);
