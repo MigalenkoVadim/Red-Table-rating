@@ -4,9 +4,9 @@ import obj from '../data/games.json';
 
 export function playersStat() {
     for (let i = 1; i < ratingPlayers.length; i++) {
- 
+
         for (let j = 1; j < ratingPlayers.length; j++) {
-     
+
             if( ratingPlayers[j].value > ratingPlayers[j-1].value ){
                 var temp = ratingPlayers[j];
                 ratingPlayers[j] = ratingPlayers[j-1];
@@ -49,7 +49,7 @@ export function playersStat() {
             if (ratingPlayers[j].nick == nick) {continue};
             let nick1 = ratingPlayers[j].nick;
             let mafs = 0, mafsWins = 0, mirs = 0, mirsWins = 0, mafMir = 0, mafMirWins = 0, mirMafWins = 0, mirMaf = 0;
-            for (let i = 1; i <= allGames; i++) {
+            for (let i = 179; i <= allGames; i++) {
                 if (Object.values(obj[i]).indexOf(nick) !== -1 && Object.values(obj[i]).indexOf(nick1) !== -1) {
                     let number = Object.values(obj[i]).indexOf(nick) + 1;
                     let number1 = Object.values(obj[i]).indexOf(nick1) + 1;
@@ -103,7 +103,7 @@ export function playersStat() {
             mafs == 0 ? $(`.${nick1}:nth-child(3) .percent`).html('-') : '';
             mirMaf == 0 ? $(`.${nick1}:nth-child(4) .percent`).html('-') : '';
             mafMir == 0 ? $(`.${nick1}:nth-child(5) .percent`).html('-') : '';
-            
+
             for(let i = 2; i < 6; i++) {
                 if (parseFloat($(`.${nick1}:nth-child(${i}) .percent`).text()) > 85) {
                     $(`.${nick1}:nth-child(${i})`).css('background', 'green');

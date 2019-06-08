@@ -4,7 +4,7 @@ import obj from '../data/games.json';
 
 export function gameBase() {
     $('.table-here').html(`<section class='games-wrapper'></section>`);
-    for(let i = 1; i < allGames; i++ ) {
+    for(let i = 179; i < allGames; i++ ) {
         $('.games-wrapper').append(`
             <div class='game-wrapper'>
                 <table class='game head ${i}'>
