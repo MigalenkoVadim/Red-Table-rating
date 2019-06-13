@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 268;
+let allGames = 273;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -174,7 +174,7 @@ export function playerRow(nick, num) {
     player.points = points;
     player.result = result;
     player.num = num;
-    if (Math.ceil((allGames-178)*0.15) < games) {
+    if (Math.ceil((allGames-178)*0.15) <= games) {
         ratingPlayers.push(player);
     } else if ((allGames-178)/20 <= games){
         nonRatingPlayers.push(player);
