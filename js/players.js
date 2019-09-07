@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 318;
+let allGames = 323;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -50,6 +50,7 @@ playerRow("Котяра");
 playerRow("Yesterday");
 playerRow("Латвия");
 playerRow("Лайт");
+playerRow("Алиса");
 
 export function playerRow(nick, num) {
     let player = {};
@@ -119,7 +120,7 @@ export function playerRow(nick, num) {
             <td class='maf'>${maf}</td>
             <td class='maf-wins'>${mafWins}</td>
             <td class='py'>${py}</td>
-            <td class='lx'>${lx}</td>
+            <td class='lx'>${lx.toFixed(2)}</td>
             <td class='points'>${points}</td>
             <td class='result'>${result}</td>
         </tr>`;
