@@ -34,7 +34,7 @@ export function numberStat() {
         let nick = ratingPlayers[i].nick;
         let winsArr = [0,0,0,0,0,0,0,0,0,0];
         let gamesArr = [0,0,0,0,0,0,0,0,0,0];
-        for (let i = 179; i <= allGames; i++) {
+        for (let i = 360; i <= allGames; i++) {
             if (Object.values(obj[i]).indexOf(nick) !== -1) {
                 let number = Object.values(obj[i]).indexOf(nick) + 1;
                 gamesArr[number-1]++;
