@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 417;
+let allGames = 447;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -53,6 +53,10 @@ playerRow("Лайт");
 playerRow("Алиса");
 playerRow("Мориарти");
 playerRow("22");
+playerRow("Цензор");
+playerRow("Печкин");
+playerRow("Enigma");
+playerRow("Игрок9");
 
 export function playerRow(nick, num) {
     let player = {};
