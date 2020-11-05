@@ -107,7 +107,7 @@ function startingTable() {
     $('.table-here').append(`
         <table>
             <tr>
-                <td style='background: yellow'>Всего игр: ${allGames-359}</td>
+                <td style='background: yellow'>Всего игр: ${allGames-452}</td>
             </tr>
             <tr>
                 <td style='background: lightcoral'>Побед мирных: ${Math.round(redWins*1000)/1000}</td>
@@ -116,7 +116,7 @@ function startingTable() {
                 <td  style='background: rgb(32, 31, 31); color: white;'>Побед мафии:${blackWins}</td>
             </tr>
             <tr>
-                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.ceil((allGames-359)*0.15)}</td>
+                <td style='background: lightgray'>Игр для попадания в рейтинг:${Math.ceil((allGames-452)*0.15)}</td>
             </tr>
         </table>
     `);

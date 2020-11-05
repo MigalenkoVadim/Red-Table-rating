@@ -49,7 +49,7 @@ export function playersStat() {
             if (ratingPlayers[j].nick == nick) {continue};
             let nick1 = ratingPlayers[j].nick;
             let mafs = 0, mafsWins = 0, mirs = 0, mirsWins = 0, mafMir = 0, mafMirWins = 0, mirMafWins = 0, mirMaf = 0;
-            for (let i = 360; i <= allGames; i++) {
+            for (let i = 453; i <= allGames; i++) {
                 if (Object.values(obj[i]).indexOf(nick) !== -1 && Object.values(obj[i]).indexOf(nick1) !== -1) {
                     let number = Object.values(obj[i]).indexOf(nick) + 1;
                     let number1 = Object.values(obj[i]).indexOf(nick1) + 1;

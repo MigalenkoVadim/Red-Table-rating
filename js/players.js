@@ -1,5 +1,5 @@
 import obj from '../data/games.json';
-let allGames = 452;
+let allGames = 457;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
@@ -58,11 +58,12 @@ playerRow("Печкин");
 playerRow("Enigma");
 playerRow("Игрок9");
 playerRow("Улитко");
+playerRow("NeLubluIgruPrestolov");
 
 export function playerRow(nick, num) {
     let player = {};
     let number = 0, games = 0, wins = 0, sher = 0, sherWins = 0, mir = 0, mirWins = 0, don = 0, donWins = 0, maf = 0, mafWins = 0, py = 0, lx = 0, points = 0, result = 0;
-    for (let i = 360; i <= allGames; i++) {
+    for (let i = 0; i <= allGames; i++) {
         if (Object.values(obj[i]).indexOf(nick) !== -1) {
             number = Object.values(obj[i]).indexOf(nick) + 1;
             games++;
@@ -95,7 +96,7 @@ export function playerRow(nick, num) {
         points = wins + +(lx);
         result = Math.round(points/games * 10000)/100;
     }
-    if (num && Math.ceil((allGames-359)*0.15) > games) {
+    if (num && Math.ceil((allGames-452)*0.15) > games) {
         player.code = `<tr class='gray'>
             <td class='nick'><p>${nick}</p><p class='num gray'>${num}</p></td>
             <td class='games'>${games}</td>
@@ -131,7 +132,7 @@ export function playerRow(nick, num) {
             <td class='points'>${points}</td>
             <td class='result'>${result}</td>
         </tr>`;
-    } else if (Math.ceil((allGames-359)*0.15) > games){
+    } else if (Math.ceil((allGames-452)*0.15) > games){
         player.code = `<tr class='gray'>
             <td class='nick'>${nick}</td>
             <td class='games'>${games}</td>
@@ -185,9 +186,9 @@ export function playerRow(nick, num) {
     player.points = points;
     player.result = result;
     player.num = num;
-    if (Math.ceil((allGames-359)*0.15) <= games) {
+    if (Math.ceil((allGames-452)*0.15) <= games) {
         ratingPlayers.push(player);
-    } else if ((allGames-359)/20 <= games){
+    } else if ((allGames-452)/20 <= games){
         nonRatingPlayers.push(player);
     }
 
