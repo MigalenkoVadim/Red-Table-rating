@@ -63,7 +63,7 @@ playerRow("NeLubluIgruPrestolov");
 export function playerRow(nick, num) {
     let player = {};
     let number = 0, games = 0, wins = 0, sher = 0, sherWins = 0, mir = 0, mirWins = 0, don = 0, donWins = 0, maf = 0, mafWins = 0, py = 0, lx = 0, points = 0, result = 0;
-    for (let i = 0; i <= allGames; i++) {
+    for (let i = 453; i <= allGames; i++) {
         if (Object.values(obj[i]).indexOf(nick) !== -1) {
             number = Object.values(obj[i]).indexOf(nick) + 1;
             games++;
